@@ -181,6 +181,7 @@ function doMath(Operational, a, b) {
     var b = b;
     var which_function = Math.floor((Math.random() * 3) + 1);
     var x = Operational[which_function];
-    x(a,b);
+    console.log(which_function)
+    return x(a,b);
 };
 

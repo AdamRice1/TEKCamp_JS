@@ -53,8 +53,18 @@ next(x)
 // undefined
 // ""
 
-
-
+console.log(20 + 'is a truthy value because it is defined')
+console.log(0 + 'is a truthy value because it is defined')
+console.log("zero" + 'is a truthy value because it is defined')
+console.log(zero + "is a truthy value because it is defined")
+console.log(null + "is falsy because it is not defined")
+console.log("0" + 'is a truthy value because it is defined')
+console.log(!"" + 'is a falsy value because it is not defined')
+console.log({} + 'is a falsy value because it is undefined')
+console.log(() + 'is a falsy value because it is undefined')
+console.log(125 + 'is a truthy value because it is defined')
+console.log("undefined" + 'is a falsy value because it is undefined')
+console.log("" + 'is a truthy value because it is undefined')
 
 /************************************************************* */
 // Problem 4:
@@ -76,7 +86,38 @@ if(day === "monday") {
     console.log("It's a weekend!")
 }
 
+//code:
 
+const day = "friday";
+switch (new Date().getDay()) {
+//const day = "friday";
+case 0:
+    day = "Monday"
+    console.log("we got a long week ahead of us...");
+    break;
+case 1:
+    day = "Tuesday"
+    console.log("tuesday's are still beterr than mondays, but LONG way to go still");
+    break;
+case 2:
+    day = "Wednesday"
+    console.log("We are smack dab in the middle of the week");
+    break;
+case 3:
+    day = "Thursday"
+    console.log("Thursday night... the mood is right");
+
+    break;
+case 4:
+    day = "Friday"
+    console.log("TGIF.  Friday truly is the best day of the week!")
+
+    break;
+case 5:
+    day = 'Saturday'
+    console.log("It's a weekend!")
+    break;
+}
 
 /************************************************************* */
 // Problem 5: Refactor the following functions to use a ternary expression:
