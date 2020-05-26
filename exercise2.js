@@ -89,8 +89,7 @@ if(day === "monday") {
 //code:
 
 const day = "friday";
-switch (new Date().getDay()) {
-//const day = "friday";
+switch (day) {
 case 0:
     day = "Monday"
     console.log("we got a long week ahead of us...");
@@ -133,6 +132,18 @@ if (age > 13 && age < 19) console.log('teen'); else {
 if (age > 65) console.log("retired"); else {
     console.log("still working...");
 }
+ //code:
+
+ const age = 10;
+
+ age > 21 ? console.log("adult")
+ : console.log("not a teen")
+
+ age > 13 && age < 19 ? console.log("teen")
+ : console.log("not a teen")
+
+ age > 65 ? console.log("retired")
+ : console.log("still working")
 
 
 /************************************************************* */
@@ -151,13 +162,45 @@ if (age > 65) console.log("retired"); else {
 */
 
 //your code...
+var person = {
+    name: "Adam Rice",
+    age: "25",
+    gender: 'male',
+    hobbies: ['walking dog', 'watching movies', 'playing games', 'golfing'],
+    job: 'systems engineer',
+    eduction: ['Rifle High School', "Baylor University", 'Coding Dojo', 'TEKCamp'],
 
+    learn: function() {
+        console.log(name)
+    },
+    schools: function(){
+        for (var i in this.eduction){
+            console.log(this.eduction[i])
+        }
+    }
+
+    };
 
 /************************************************************* */
 // Problem 6: Create an object literal that represents any object in the real world that you like.  Try to come up with a realistic set of properties and methods that would accurately describe that object.  In at least one of your methods, use the this keyword to refer back to one of the properties you defined on this object literal.  
 
 //your code...
 
+var Copper = {
+    name: 'Copper Rice',
+    breed: "Lab Mix",
+    toys: ['rings', 'ball', 'donut', 'tubes'],
+    friends: ['whiskey', 'zuzu', 'willie', 'maya'],
+    activities: ['sleep', 'eat', 'walk', 'run', 'play'],
+
+    call: function() {
+        console.log('bark bark bark')
+    },
+
+    pull_game: function() {
+        console.log(this.toys[0] + this.friends[3])
+    },
+}
 
 
 /************************************************************* */
@@ -165,6 +208,13 @@ if (age > 65) console.log("retired"); else {
 
 //your code...
 
+function data_types(){
+    var one = 1;
+    var two = "Adam Rice"
+    var three = [1,2,3,4,5,6]
+    console.log(one + two + three + 'integers, strings, and arrays are my favorite data types because they are the most likely to be seen in interview questions.  Arrays are also useful when pulling data from a database.')
+    return one, two, three
+}
 
 
 /************************************************************* */
