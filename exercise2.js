@@ -10,16 +10,30 @@ for(let i=0; i<10; i++) {
 
 
 //your code...
-
+while(i < 10){
+    console.log('the value of i is' + i);
+    i ++;
+}
 
 
 
 /************************************************************* */
 // Problem 2:
-// multiply the sum of 30 added to two by 20.  Divide the product by 10 raised to the power of 2
-//use javascript to compute the value of the above statement. Each individual operation needs to be a function expression. run all the functions after defining them, and print the answer to the console.
+// multiply the sum of 30 added to two by 20.  Divide the product by 10 raised to the power of 2 use javascript to compute the value of the above statement. Each individual operation needs to be a function expression. run all the functions after defining them, and print the answer to the console.
 
-//your code...
+function thirty() {
+    var x = 30 + 2;
+    x = x * 20;
+    return x
+};
+function next(x){
+    var x = x;
+    x = x / (10 ** 2);
+    console.log(x)
+    return x
+}
+thirty()
+next(x)
 
 
 /************************************************************* */
