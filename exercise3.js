@@ -224,3 +224,24 @@ function greeting(name) {
 /************************************************************* */
 //Bonus assignment:
 //research a new feature of ES6+ and create an example of it's use case here.  Be sure to write comments explaining what the feature is and why it is useful.
+class Dog {
+    constructor(breed, name) {
+      this.owner = 'Adam';
+      this.breed = breed;
+      this.name = name;
+    }
+    sayName() {
+     console.log("Bark Bark Bark" + this.name)
+    }
+  
+    sayOwner() {
+      console.log("I am owned by" + this.owner)
+    }
+    sayBreed(){
+      console.log("I am a" + this.breed)
+    }
+  }
+  
+  dog1 = new Dog('lab', 'copper')
+  
+  console.log(dog1.owner)
