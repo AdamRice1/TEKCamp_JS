@@ -8,7 +8,14 @@
 
 
 //your code...
-
+function stringLength(string){
+    var x = string;
+    if(x.length >= 1){
+        return true;
+    } 
+    else
+        return false
+};
 
 
 
@@ -21,8 +28,13 @@
 
 
 //your code...
-
-
+    function replaceWord(){
+        var sentence = "Learning JS is fun!";
+        sentence = sentence.split(' ');
+        sentence[sentence.length -1] = 'cool!';
+        sentence = sentence.join(' ');
+        return sentence
+    }
 
 
 /************************************************************* */
@@ -33,7 +45,13 @@
 
 //your code...
 
-
+square = () => {
+    var arr = [1,2,3,4,5];
+    for(var i in arr){
+        arr[i] = (arr[i] ** arr[i]);
+    };
+    return arr
+}
 
 
 
@@ -46,7 +64,15 @@
 
 //your code...
 
-
+greaterThenThree = () => {
+    var arr = [1,3,5,7,9,1,3,5];
+    for(var i in arr){
+        if(arr[i] > 3){
+            arr.splice(i, 1);
+        };
+    };
+    return arr
+}
 
 
 
@@ -59,7 +85,13 @@
 
 //your code...
 
-
+sumUp = () => {
+    var arr = [1,2,3,4,5];
+    var sum = 0;
+    for(var i in arr){
+        sum = sum + arr[i];
+    };
+}
 
 
 
@@ -74,7 +106,11 @@
 
 //your code...
 
-
+function toArray(string){
+    var dna = string;
+    dna = dna.split("");
+    return dna
+}
 
 
 
@@ -86,13 +122,37 @@
 const numbers = [2,23,1,2,1,1,1,2,2.5,20,200,2000,,{k:1},20000,19999,1878,140,23,4,"sk",true,true,"true-dat","nice","one","two","three","3","tea",[]];
 
 function maxNumber(numbers) {
-    //your code...
+    var arr = numbers;
+    var max = arr[0];
+    var one = 'one'
+    var two = 'two'
+    var three = 'three'
+    var three_1 = "3"
+    for(var i in arr){
+        if(arr[i] > max){
+            max = arr[i]
+        };
+        if(arr[i] == one){
+            arr[i] = one;
+        };
+        if(arr[i] == two){
+            arr[i] = two;
+        };
+        if(arr[i] == three){
+            arr[i] = three;
+        };
+        if(arr[i] == three_1){
+            arr[i] = three_1;
+        };
+    }
+    return max
 }
 
 // 7.b -Write a function that sorts the given numbers array.  Allow the function to sort the array in descending order
 
 function sortNums(numbers,desc=false) {
-    //your code...
+    numbers.sort()
+    return numbers
 };
 
 
@@ -103,16 +163,33 @@ function sortNums(numbers,desc=false) {
 //add an example of at least 5 JavaScript data types to the given mapObj.  The key is the example data type, and the value is the name of the data type.  An object data type has already been set as the 1st key / val pair.
 
 const mapObj = new Map();
-mapObj.set({company : "TEKsystems"},"object");
-
+mapObj.set({company : "TEKsystems"}, {object : person = {first_name: "adam", last_name: 'rice'}}, {integer: "5"}, {string: "hello"}, {array: [1,2,3,4,5,6]}, {boolean: true}) ;
 
 console.log(mapObj.has({company : "TEKsystems"}));  
-//The above console.log() statmeent returns false.  Write another console.log() statement explaining why this line of code prints false.  Refactor the code on line 106, so you can successfully check to see if {company : "TEKsystems"} exists in the mapObj.
+console.log("this prints false because the map object is being set incorrectly. The .has function is also incorrectly used.")
+//The above console.log() statement returns false.  Write another console.log() statement explaining why this line of code prints false.  Refactor the code on line 106, so you can successfully check to see if {company : "TEKsystems"} exists in the mapObj.
 
-//your code...
+var mapObj = new Map();
+mapObj.set('company', 'TEKsystems');
+mapObj.set('object', person = {first_name: "adam", last_name: 'rice'});
+mapObj.set('integer', 5);
+mapObj.set('string', 'hello');
+mapObj.set('array', [1,2,3,4,5,6]);
+mapObj.set('boolean', true);
+
+console.log(mapObj)
+console.log(mapObj.has('company' , "TEKsystems")); 
 
 //loop through the mapObj and create a new array of only the data types, leaving out the example keys of the mapObj.  Use array methods to do this.  Example output : ['string',number','boolean',array','object']
-
+function hello(mapObj){
+    var new_arr = []
+  for (const [key, value] of mapObj.entries()) {
+    console.log(new_arr)
+    new_arr.push(value)
+  }
+  return new_arr
+  }
+  hello(mapObj)
 
 /************************************************************* */
 //Problem 11:
@@ -120,14 +197,28 @@ console.log(mapObj.has({company : "TEKsystems"}));
 let ones = [1,11,111,1111,11111,111111,1111111,11111111,111111111,1111111111];
 //reverse the array, without modifying the ones array.
 
+function reverse(){
+    var ones = [1,11,111,1111,11111,111111,1111111,11111111,111111111,1111111111];
+  
+    var twos = ones
+    twos.reverse()
+    return twos
+  }
 
 /************************************************************* */
 //Problem 12:
 //create a function called performer(cb) that takes in a callback function and runs that callback function.  It should return the output of the callback function.
 
-function performer(cb) {
-    //code goes here
-}
+function greeting(name) {
+    console.log('Hello My Name is' +" "+ name)
+  }
+  
+  function preformer(cb, name) {
+    var name = name;
+    cb(name);
+  }
+  
+  preformer(greeting, 'Adam')
 
 
 /************************************************************* */

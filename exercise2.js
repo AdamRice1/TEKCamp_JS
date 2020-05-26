@@ -115,7 +115,6 @@ case 4:
 case 5:
     day = 'Saturday'
     console.log("It's a weekend!")
-    break;
 }
 
 /************************************************************* */
