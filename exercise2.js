@@ -1,5 +1,5 @@
 //Complete the following problems:
-
+//Finished
 /************************************************************* */
 // Problem 1: Refactor the for() loop to be a while loop.
 //
