@@ -133,19 +133,22 @@ function maxNumber(numbers) {
             max = arr[i]
         };
         if(arr[i] == one){
-            arr[i] = one;
+            arr[i] = 1;
         };
         if(arr[i] == two){
-            arr[i] = two;
+            arr[i] = 2;
         };
         if(arr[i] == three){
-            arr[i] = three;
+            arr[i] = 3;
         };
         if(arr[i] == three_1){
-            arr[i] = three_1;
+            arr[i] = 3;
         };
+        if(typeof(arr[i] != integer)){
+            splice(arr[i])
+        }
     }
-    return max
+    return max, arr
 }
 
 // 7.b -Write a function that sorts the given numbers array.  Allow the function to sort the array in descending order
