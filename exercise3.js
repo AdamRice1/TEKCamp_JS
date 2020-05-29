@@ -109,6 +109,14 @@ sumUp = () => {
 function toArray(string){
     var dna = string;
     dna = dna.split("");
+    dna.sort();
+    var temp = dna[0];
+    dna[0] = dna[2];
+    dna[2] = temp;
+    temp = dna[0];
+    dna[0] = dna[1];
+    dna[1] = temp;
+    dna.join();
     return dna
 }
 
