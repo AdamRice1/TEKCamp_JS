@@ -129,9 +129,6 @@ function maxNumber(numbers) {
     var three = 'three'
     var three_1 = "3"
     for(var i in arr){
-        if(arr[i] > max){
-            max = arr[i]
-        };
         if(arr[i] == one){
             arr[i] = 1;
         };
@@ -144,9 +141,12 @@ function maxNumber(numbers) {
         if(arr[i] == three_1){
             arr[i] = 3;
         };
-        if(typeof(arr[i] != number)){
+        if(typeof(arr[i] != 'number')){
             splice(arr[i])
         }
+        if(arr[i] > max){
+            max = arr[i]
+        };
     }
     return max, arr
 }
