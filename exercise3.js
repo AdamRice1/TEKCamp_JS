@@ -144,7 +144,7 @@ function maxNumber(numbers) {
         if(arr[i] == three_1){
             arr[i] = 3;
         };
-        if(typeof(arr[i] != integer)){
+        if(typeof(arr[i] != number)){
             splice(arr[i])
         }
     }
