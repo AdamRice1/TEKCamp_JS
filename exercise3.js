@@ -106,6 +106,8 @@ sumUp = () => {
 
 //your code...
 
+// I was not sure what to do exactly with this one so I did it 2 different ways.
+
 function toArray(string){
     var dna = string;
     dna = dna.split("");
@@ -118,6 +120,43 @@ function toArray(string){
     dna[1] = temp;
     dna.join();
     return dna
+}
+
+function toArray(string){
+    var dna = string;
+    let tempC = ''
+    let tempG = ''
+    let tempA = ''
+    let tempT = ''
+    dna = dna.split("");
+    for(var i = 0; i < dna.length; i++){
+      if(dna[i] == 'C'){
+         tempC = dna[i];
+      }
+      if(dna[i] == 'G'){
+         tempG = dna[i];
+      }
+      if(dna[i] == 'A'){
+         tempA = dna[i];
+      }
+      if(dna[i] == 'T'){
+         tempT = dna[i];
+      }
+    };
+    let new_dna = [];
+    new_dna.push(tempC);
+    new_dna.push(tempG);
+    new_dna.push(tempA);
+    new_dna.push(tempT);
+    // dna.sort();
+    // var temp = dna[0];
+    // dna[0] = dna[2];
+    // dna[2] = temp;
+    // temp = dna[0];
+    // dna[0] = dna[1];
+    // dna[1] = temp;
+    // dna.join();
+    return new_dna
 }
 
 
